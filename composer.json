@@ -1,11 +1,11 @@
 {
-    "name": "tedy/arifpay",
+    "name": "arifpay/Php_sdk",
     "description": "Php_sdk",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "tewodros",
+            "name": "Tewodros Genetu ",
             "email": "info.tewdrosgenetu@gmail.com"
         }
     ],
