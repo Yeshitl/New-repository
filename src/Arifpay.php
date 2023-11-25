@@ -51,7 +51,7 @@ class Arifpay
     
             if ($response->getStatusCode() === 200) {
                 $responseData = json_decode($response->getBody(), true);
-                return $response->getBody();
+               return $response->getBody();
 
             } else {
                 return 'Request failed with status: ' . $response->getStatusCode();

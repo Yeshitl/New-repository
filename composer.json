@@ -1,5 +1,6 @@
 {
-    "name": "arifpay_php_plugin/php_sdk",
+    "name": "arif/php_sdk",
+    "version": "1.0.0",
     "description": "Php_sdk",
     "type": "library",
     "license": "MIT",
