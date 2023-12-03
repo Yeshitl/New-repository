@@ -6,7 +6,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Tewodros Genetu ",
+            "name": "Tewodros Genetu",
             "email": "info.tewdrosgenetu@gmail.com"
         }
     ],
@@ -14,11 +14,9 @@
     "require": {    
         "php": "7.4.*",
         "guzzlehttp/guzzle": "^7.8"
-
     },
     "autoload": {
-        "psr-4": {
-           
+        "psr-4": {           
             "Phpsdk\\": "src/Phpsdk/"
         }
     }

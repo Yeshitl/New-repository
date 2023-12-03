@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'name' => 'tedy/arifpay',
-        'pretty_version' => '1.0.0+no-version-set',
+        'name' => 'arif-sdk/php',
+        'pretty_version' => '1.0.0',
         'version' => '1.0.0.0',
         'reference' => NULL,
         'type' => 'library',
@@ -10,6 +10,15 @@
         'dev' => true,
     ),
     'versions' => array(
+        'arif-sdk/php' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '7.8.0',
             'version' => '7.8.0.0',
@@ -97,15 +106,6 @@
             'reference' => 'e8b495ea28c1d97b5e0c121748d6f9b53d075c66',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'tedy/arifpay' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

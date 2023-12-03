@@ -14,7 +14,7 @@ require_once __DIR__ . "/CheckoutItem.php";
 
 class CheckoutModel
 {
-    
+
     public $cancelUrl;
     public $nonce;
     public $phone;
@@ -27,20 +27,6 @@ class CheckoutModel
     public $items = [];
     public $beneficiaries = [];
     public $lang;
-
-    // private $orderId;
-    // private $redirectUrl;
-
-    // public function setOrderId($orderId)
-    // {
-    //     $this->orderId = $orderId;
-    // }
-    // public function setRedirectUrl($redirectUrl)
-    // {
-    //     $this->redirectUrl = $redirectUrl;
-    // }
-
-
 
     public function getCancelUrl()
     {
@@ -58,7 +44,7 @@ class CheckoutModel
         $this->nonce = uniqid();
         return $this;
     }
-    
+
     public function getNonce()
     {
         return $this->nonce;
@@ -121,15 +107,14 @@ class CheckoutModel
 
     public function paymentMethods($paymentMethods)
     {
-        if (is_array($paymentMethods)) {
-            foreach ($paymentMethods as $method) {
-                if (!is_string($method)) {
-                    throw new InvalidArgumentException('All payment methods should be strings.');
-                }
-            }
-        } else {
-            throw new InvalidArgumentException('Payment methods should be an array.');
-        }
+        // if (empty($paymentMethods)) {
+        //     throw new \InvalidArgumentException('At least one payment method is required.');
+        // }
+
+
+        // if (!is_array($paymentMethods)) {
+        //     throw new \InvalidArgumentException('Payment methods should be an array.');
+        // }
 
         $this->paymentMethods = $paymentMethods;
         return $this;
@@ -170,8 +155,7 @@ class CheckoutModel
 
 
     /**
-     * @return array    An associative array that contains post data
-     *                  as a key-value pair.
+     * @return array    
      */
     public function getAsKeyValue()
     {

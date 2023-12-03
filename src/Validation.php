@@ -9,6 +9,18 @@ require_once __DIR__ . "/Model/CheckoutModel.php";
 
 class Validator
 {
+    public function paymentMethods($paymentMethods)
+    {
+        if (empty($paymentMethods)) {
+            throw new \InvalidArgumentException('At least one payment method is required.');
+        }
+
+        if (!is_array($paymentMethods)) {
+            throw new \InvalidArgumentException('Payment methods should be an array.');
+        }
+
+
+    }
     public static function validateBeneficiary(Beneficiary $beneficiary)
     {
         if (!is_numeric($beneficiary->accountNumber)) {
@@ -17,6 +29,10 @@ class Validator
 
         if (!is_string($beneficiary->bank)) {
             throw new \InvalidArgumentException('Invalid bank format. Please provide a string for the bank.');
+        }
+
+        if (empty($beneficiary->amount)) {
+            throw new \InvalidArgumentException('Amount is mandatory . Please provide a valid amount.');
         }
 
         if (!is_numeric($beneficiary->amount)) {
@@ -64,15 +80,18 @@ class Validator
 
             // Validate email
             $email = $checkoutModel->getEmail();
-            if (!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email)) {
+            if (!empty($email) && !preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/", $email)) {
                 throw new \InvalidArgumentException('Invalid email format. Please provide a valid email address.');
             }
 
-            // Validate nonce
-            // $nonce = $checkoutModel->getNonce();
-            // if (!is_string($nonce)) {
-            //     throw new \InvalidArgumentException('Invalid nonce format. Please provide a string value for the nonce.');
-            // }
+            //Validate expireDate
+            $expireDate = $checkoutModel->getExpireDate();
+            if (empty($expireDate)) {
+                throw new \InvalidArgumentException('Expiration date is required. Please provide a valid expiration date.');
+            }
+            if (!preg_match("/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/", $expireDate)) {
+                throw new \InvalidArgumentException('Invalid expireDate format. Please provide a valid date in the format YYYY-MM-DDTHH:MM:SS.');
+            }
 
             // Validate errorUrl
             $errorUrl = $checkoutModel->getErrorUrl();
@@ -94,16 +113,5 @@ class Validator
         } catch (\InvalidArgumentException $e) {
             throw new \InvalidArgumentException($e->getMessage());
         }
-    }
-
-    /**
-     * @param string $prefix Prefix for transaction reference token e.g. company initials.
-     * @return string Generated token which contains $prefix, some random string
-     *                and a timestamp.
-     * @throws \Exception
-     */
-    public static function generateToken($prefix = 'cp')
-    {
-        return $prefix . '_' . bin2hex(random_bytes(5)) . '_' . date('d-m-y_h-i-s');
     }
 }

@@ -3,25 +3,25 @@ namespace Phpsdk;
 
 use Phpsdk\Model\Beneficiary;
 use Phpsdk\Model\CheckoutModel;
-use Phpsdk\Model\CheckoutItem; // Add the import statement for CheckoutItem
+use Phpsdk\Model\CheckoutItem;
 use Phpsdk\Arifpay;
 
 require_once __DIR__ . "/../vendor/autoload.php";
-require_once __DIR__ . "/Model/CheckoutModel.php"; // Update the path to the CheckoutModel file
-require_once __DIR__ . "/Model/CheckoutItem.php"; // Add the path to the CheckoutItem file
+require_once __DIR__ . "/Model/CheckoutModel.php";
+require_once __DIR__ . "/Model/CheckoutItem.php";
 require_once __DIR__ . "/Arifpay.php";
 
-$checkoutModel = new CheckoutModel(); // Create an instance of CheckoutModel
+$checkoutModel = new CheckoutModel();
 $arifpay = new Arifpay('tZzd6Kd34xXfY7GNAi9eMjjLeaNXuxYR');
-// Add the additional properties from the provided JSON data
+
 $checkoutModel->cancelUrl('https://example.com')
     ->phone('251944294981')
-    ->email('natnael@arifpay.net')
+    ->email('natnae@arifpay.net')
     ->generateNonce()
     ->errorUrl('http://error.com')
     ->notifyUrl('https://gateway.arifpay.net/test/callback')
     ->successUrl('http://example.com')
-    ->paymentMethods(['TELEBIRR'])
+    ->paymentMethods([''])
     ->expireDate('2025-02-01T03:45:27');
 
 
@@ -62,8 +62,7 @@ foreach ($beneficiaries as $beneficiary) {
 }
 
 $checkoutModel->lang = 'EN';
-//echo json_encode($checkoutModel)
+
 $result = $arifpay->initialize($checkoutModel);
 echo $result;
-
 ?>
