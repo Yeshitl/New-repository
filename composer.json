@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {           
-            "Phpsdk\\": "src/"
+            "Yash/php": "src/"
         }
     }
 }
