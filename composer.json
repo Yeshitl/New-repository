@@ -6,8 +6,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Tewodros Genetu",
-            "email": "info.tewdrosgenetu@gmail.com"
+            "name": "Yeshitla Woinshet",
+            "email": "yeshitla@arifpay.org"
         }
     ],
     "minimum-stability": "stable",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {           
-            "Phpsdk\\": "src/Phpsdk/"
+            "Phpsdk\\": "src/"
         }
     }
 }

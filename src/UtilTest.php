@@ -21,11 +21,10 @@ $checkoutModel->cancelUrl('https://example.com')
     ->errorUrl('http://error.com')
     ->notifyUrl('https://gateway.arifpay.net/test/callback')
     ->successUrl('http://example.com')
-    ->paymentMethods([''])
+    ->paymentMethods(['CBE'])
     ->expireDate('2025-02-01T03:45:27');
 
 
-// Create an array of items
 $items = [
     new CheckoutItem(
         'ሙ4ዝ',
