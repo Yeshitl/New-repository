@@ -22,8 +22,8 @@
     "guzzlehttp/guzzle": "^7.8"
 },
     "autoload": {
-        "psr-4": {           
-            "latestarif-sdk/php": "src/"
-        }
+    "psr-4": {           
+        "LatestArifSdk\\Php\\": "src/"
     }
+}
 }
