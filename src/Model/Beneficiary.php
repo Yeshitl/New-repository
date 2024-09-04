@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpsdk\Model;
+namespace LatestArifSdk\Php\Models;
 
 class Beneficiary
 {

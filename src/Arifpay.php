@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpsdk;
+namespace LatestArifSdk\Php\Models;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . "/Validation.php";

@@ -1,5 +1,5 @@
 <?php
-namespace phpsdk;
+namespace LatestArifSdk\Php\Models;
 
 use Phpsdk\Model\Beneficiary;
 use Phpsdk\Model\CheckoutItem;

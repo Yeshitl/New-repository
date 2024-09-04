@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpsdk\Exception;
+namespace LatestArifSdk\Php\Models;
 
 use RuntimeException;
 
