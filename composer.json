@@ -16,7 +16,8 @@
         "url": "https://github.com/Yeshitl/New-repository.git"
     }
 ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
     "php": "^7.4 || ^8.0",
     "guzzlehttp/guzzle": "^7.8"
