@@ -10,6 +10,12 @@
             "email": "yeshitla@arifpay.org"
         }
     ],
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/Yeshitl/New-repository.git"
+    }
+],
     "minimum-stability": "stable",
     "require": {
     "php": "^7.4 || ^8.0",
