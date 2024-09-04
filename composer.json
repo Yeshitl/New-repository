@@ -1,5 +1,5 @@
 {
-    "name": "Yash/php",
+    "name": "latestarif-sdk/php",
     "version": "1.0.0",
     "description": "Php_sdk",
     "type": "library",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {           
-            "Yash/php": "src/"
+            "latestarif-sdk/php": "src/"
         }
     }
 }
