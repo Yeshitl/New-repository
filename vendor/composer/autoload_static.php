@@ -17,7 +17,10 @@ class ComposerStaticInit25a1989b03b6bfec752a6d4b984f6297
         array (
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
-            'Phpsdk\\' => 7,
+        ),
+        'L' => 
+        array (
+            'LatestArifSdk\\Php\\' => 18,
         ),
         'G' => 
         array (
@@ -37,9 +40,9 @@ class ComposerStaticInit25a1989b03b6bfec752a6d4b984f6297
         array (
             0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
-        'Phpsdk\\' => 
+        'LatestArifSdk\\Php\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Phpsdk',
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
